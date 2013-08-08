@@ -1,0 +1,65 @@
+<html>
+<head>
+	<title></title>
+	
+	<!--COMENTO PARA NO TENER -->
+	<!--<script type="text/javascript" src='phonegap-1.2.0.js'></script>-->
+	<script type="text/javascript">
+
+	document.addEventListener('load',function (){
+
+
+		document.addEventListener('deviceready',function (){
+
+		// ESTAMOS LISTOS PARA EJECUTAR CUALQUIER FUNCION DE PHONEGAP
+		
+		// persistent o remporal
+		window.requestFileSystem(LocalFileSystem.PERSISTENT,0,archivosDisponibles,function (){
+			navigator.notification.alert('ha ocurrido un error')});
+
+
+		},false);
+
+
+
+	},false);
+	
+	// esta function quedo como global
+	function archivosDisponibles(fileSystem){
+		// directorio principal de nuestra aplicacion.... se guardaran alli los datos
+		fileSystem.root.getFile('ayuda.txt',null,archivosleido,fallo);
+	}
+
+
+	function archivosleido (archivo){
+
+		// al archivo aun no se ha leido.. se escogio.. como se pueden usar comodines para varios
+
+		archivo.file(function (archivo){
+
+			// leer modo texto o modo binario
+			var lector = new FileReader();
+			lector.onloadend = function (evento){  // evento a lector
+				alert(evento.target.result);
+			}
+			lector.readAsText(archivo);
+			lector.readDataUrl(archivo);
+			/*reader.readAsText(archivo)*/
+
+
+		},function (){
+			//errror
+		});
+
+	}
+
+
+	</script>
+
+</head>
+<body>
+<!--abriendo nuestro proyecto en ripple -->
+
+<p>esta es mi primera aplicacion para android con PhoneGap</p>
+</body>
+</html>

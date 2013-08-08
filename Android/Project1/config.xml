@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.phonegap.iddelavercion.miaplicacion" version="0.0.1">
+
+<name> mi aplicacion </name>
+
+<description> esta es una aplicacion de prueba  </description>
+
+<author href="http://www.google.com" email="algo@algo.com"> sergio </author>
+
+<icon src="icon.png" gap:role="default">  </icon>
+
+<feature name="http://api.phonegap.com/1.0/geolocation" > </feature>  <!-- lista de apis que bamos a usar de phonegap ... permisos-->
+
+<preference name="orientation" value="landscape"/>  
+
+<!-- permisos  -->
+
+<!-- tenemos mas extenciones ... si queremos definir un splash screen, permisos de internet.. otro tipo de permisos  -->
+
+<!--PHONEGAP BUIL EN DOC... using config.xml  para guiarse y configurar el xml -->
+<!--PHONEGAP BUIL EN DOC... using config.xml  como firmar backberry y android... en doc build -->
+
+<!-- INFORMACION DEL FORMADOR  -->
+
+<!-- mobilexweb.com blog -->
+<!-- mobilehtml5.org -->
+<!-- @firt facebook.com/firtman -->
+
+<!-- -->
+
+<gap:platform>
+<gap:platform name="symbian.wrt" />
+<gap:platform name="android" minVersion="2.3" />
+
+
+</gap:platform> 
+
+
+
+</widget>
+
+

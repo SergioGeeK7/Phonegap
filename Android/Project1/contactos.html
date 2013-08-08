@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title></title>
+	
+	<!--COMENTO PARA NO TENER -->
+	<!--<script type="text/javascript" src='phonegap-1.2.0.js'></script>-->
+	<script type="text/javascript">
+
+	document.addEventListener('deviceready',function (){
+
+		// ESTAMOS LISTOS PARA EJECUTAR CUALQUIER FUNCION DE PHONEGAP
+		document.getElementById('btnagregar').addEventListener('click',function (){
+			var contacto= navigator.contacts.create();
+			contacto.displayName = 'sergiohack';
+
+			contacto.name =  new ContactName();
+			contacto.name.giveName = 'sergio';
+			contacto.name.familyName = 'hack';
+
+			contacto.phoneNumbers = [];
+			contacto.phoneNumbers = [0] = new ContactField('home','5703940',true); // true numero preferido
+
+			contacto.save(function () {alert('OK');},function (){alert('error');})
+
+
+
+
+		},false);
+
+		// leer un contacato
+
+		document.getElementById('btnleercontactos').addEventListener('click',function (){
+
+			//navigator.contacts.find(['displayName']);
+			navigator.contacts.find(['*'],function (contactos){
+				for (var i = contactos.length - 1; i >= 0; i--) {
+					contactos[i] // contacto
+
+					alert(contacto.displayName); // solo estaran disponibles las propiedades de arriba
+				};
+
+			},function (){ alert('error');});
+
+		},false);
+
+	},false);
+
+
+
+
+
+
+	</script>
+
+</head>
+<body>
+<!--abriendo nuestro proyecto en ripple -->
+
+<input type='button' id='btnagregar'>
+<input type='button' id='btnleercontactos'>
+
+</body>
+</html>

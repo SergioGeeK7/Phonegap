@@ -1,0 +1,76 @@
+<html>
+<head>
+	<title></title>
+	
+	<!--COMENTO PARA NO TENER -->
+	<!--<script type="text/javascript" src='phonegap-1.2.0.js'></script>-->
+	<script type="text/javascript">
+
+	document.addEventListener('deviceready',function (){
+
+		// ESTAMOS LISTOS PARA EJECUTAR CUALQUIER FUNCION DE PHONEGAP
+		document.addEventListener('pause',function (){  
+			// cuando se va a background... (minimiza)
+		},false)
+
+		document.addEventListener('resume',function (){
+			// cuando regresa de la minimizada
+
+		},false);
+
+
+		document.addEventListener('online',function (){
+			//cuando esta online tiene internet
+
+		},false);
+		document.addEventListener('offline',function (){
+			//cuando perdio la coneccion a internet
+			//informarle al usuario que no va a funcionar
+		},false);
+
+			document.addEventListener('backbutton',function (){
+			//compatible con android y blackberry
+			// boton atras ...
+			
+		},false);
+
+			document.addEventListener('menubutton',function (){
+			//compatible con android y blackberry
+			// menu boton menu contextual...
+
+		},false);
+
+
+			document.addEventListener('startcallbutton',function (){
+			//blackberry
+			// boton de llamada... ...
+
+		},false);
+
+
+			document.addEventListener('endcallbutton',function (){
+			//blackberry
+			// boton de llamada... ...
+
+		},false);
+
+			document.addEventListener('volumeupbutton',function (){
+			//blackberry
+			// boton de llamada... ...
+
+		},false);
+
+
+	},false);
+
+
+
+	</script>
+
+</head>
+<body>
+<!--abriendo nuestro proyecto en ripple -->
+
+<p>esta es mi primera aplicacion para android con PhoneGap</p>
+</body>
+</html>

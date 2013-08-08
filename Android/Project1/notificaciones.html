@@ -1,0 +1,51 @@
+<html>
+<head>
+	<title></title>
+	
+	<!--COMENTO PARA NO TENER -->
+	<!--<script type="text/javascript" src='phonegap-1.2.0.js'></script>-->
+	<script type="text/javascript">
+
+	document.addEventListener('deviceready',function (){
+
+		// Reproducir un Beep .. 
+
+		navigator.notification.beep(4);
+
+		// Vibrar
+
+		navigator.notification.vibrate(4000); // milisegundos
+
+
+		// mensaje de alerta
+
+		navigator.notification.alert('este es un mensaje',function (){
+			// un callback asyncronica que se ejecuta cuando la alerta finalize
+
+
+
+		},'TITULO DE LA ALERTA','puchale aqui');
+
+
+		// pregunta
+
+		navigator.notification.confirm('un mensaje ?',function (button){
+
+			// param.. el numero del boton que apreto 
+
+
+		},'Eliminar contactos','puchale,o no le puches');
+
+	},false);
+
+// TRABAJANDO CON CONTACTOS
+
+	</script>
+
+</head>
+<body>
+<!--abriendo nuestro proyecto en ripple -->
+
+<p>esta es mi primera aplicacion para android con PhoneGap</p>
+</body>
+</html>

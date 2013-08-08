@@ -1,0 +1,60 @@
+<html>
+<head>
+	<title>Acelerometro</title>
+	<script type="text/javascript" src='phonegap-1.2.0.js'></script>
+	<script type="text/javascript">
+
+	var capturador;
+
+	document.addEventListener('deviceready',function (){
+		
+		capturador = navigator.device.capture;
+
+
+
+	},false);
+
+
+	function audio (){
+
+		capturador.captureAudio(capturaok,capturaerror); // 3ra funcion para opciones
+	}
+
+function video (){
+
+		capturador.captureImage(capturaok,capturaerror); // 3ra funcion para opciones
+	}
+
+	function foto (){
+
+		capturador.captureVideo(capturaok,capturaerror); // 3ra funcion para opciones
+	}
+
+	function capturaerror (){
+
+		alert('hubo un error en la captura')
+	}
+
+	function capturaok (archivos){
+
+		for (var i=0; i<archivos.length;i++){
+
+			var ruta = archivos[i].fullPath; // se guardara el ultimo archivo
+
+			var type = archivo[i].type;
+
+		}
+	}
+
+
+	</script>
+</head>
+<body>
+
+<a href="javascript:audio()">Audio</a>
+<a href="javascript:video()">Video</a>
+<a href="javascript:foto()">Foto</a>
+
+
+</body>
+</html>

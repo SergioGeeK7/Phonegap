@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Acelerometro</title>
+	<script type="text/javascript" src='phonegap-1.2.0.js'></script>
+	<script type="text/javascript">
+
+	
+
+	document.addEventListener('deviceready',function (){
+
+		// param todos los cambios que el usuario posea 
+		// getcarrent ... una sola hubicacion la de este momento la posicion
+		
+		navigator.geolocation.getCurrentPosition(posicion,error);
+
+
+
+	},false);
+
+
+	function posicion (pos){
+
+		alert('se te ha hubicado en' +pos.coords.latitude + 'y' + pos.coords.longitude);
+	}
+
+	function error (){
+
+		alert('no se ha podido saber la hubicacion ');
+	}
+
+
+	navigator.compass.watchHeadding(function (posicion){
+
+		alert(posicion.magneticHeading)
+
+
+	},function (){
+
+		alert('errror al leer la brujula');
+
+	});
+
+	</script>
+</head>
+<body>
+
+<a href="javascript:audio()">Audio</a>
+<a href="javascript:video()">Video</a>
+<a href="javascript:foto()">Foto</a>
+
+
+</body>
+</html>

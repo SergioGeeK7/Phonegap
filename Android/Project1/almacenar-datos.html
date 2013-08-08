@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title></title>
+	
+	<!--COMENTO PARA NO TENER -->
+	<!--<script type="text/javascript" src='phonegap-1.2.0.js'></script>-->
+	<script type="text/javascript">
+
+	
+
+	document.addEventListener('deviceready',function (){
+
+		// ESTAMOS LISTOS PARA EJECUTAR CUALQUIER FUNCION DE PHONEGAP
+		localStorage.setItem('nombre','maximiliano');  //se guarda localmente... solo Strings ... tambien guardar objetos como strings.. usando alguna libreria
+
+		// leer
+
+		alert(localStorage.getItem('nombre'));
+
+		// eliminar
+
+		localStorage.clear();
+
+		// o eliminar
+
+		localStorage.removeItem('nombre');
+
+		// API DE WEB SQL PARA HTML 5
+
+	},false);
+
+
+
+	</script>
+
+</head>
+<body>
+<!--abriendo nuestro proyecto en ripple -->
+
+<p>esta es mi primera aplicacion para android con PhoneGap</p>
+</body>
+</html>

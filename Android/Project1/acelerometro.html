@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Acelerometro</title>
+	<script type="text/javascript" src='phonegap-1.2.0.js'></script>
+	<script type="text/javascript">
+
+	var aceleromtroId;
+
+	document.addEventListener('diviceready',function (){
+		//haga
+		aceleromtroId = navegator.accelerometer.watchAcceleration(acelera,error);
+
+
+
+	},false);
+
+	function error (){
+
+		alert('no se pudo saber la aceleracion');
+
+	}
+
+	function acelera (aceleracion){
+
+		var x = aceleracion.x;
+		var y = aceleracion.y;
+		var z = aceleracion.z;
+		var time = aceleracion.timestamp; // cantidad de mili segundos que han pasado desde 1970
+
+
+	}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>
